@@ -1,0 +1,8 @@
+{
+  "name": "98 Ejercicios de Entrenamiento de Fútbol de la Selección Española",
+  "description": "Página de upsell de alta conversión: 98 ejercicios prácticos para entrenadores de fútbol y categorías base.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
