@@ -607,6 +607,11 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             </p>
           </div>
 
+          {/* HOTMART - Sales Funnel Widget */}
+          <div className="w-full max-w-md mx-auto my-3 min-h-[60px]">
+            <div id="hotmart-sales-funnel"></div>
+          </div>
+
           {/* SSL and security indicators */}
           <div className="flex justify-center items-center gap-4 sm:gap-6 text-[10px] font-mono text-slate-500 uppercase tracking-widest pt-3 border-t border-slate-200">
             <span className="flex items-center gap-1">🔒 Conexión SSL</span>
