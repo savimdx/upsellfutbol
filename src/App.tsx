@@ -17,7 +17,7 @@ export default function App() {
   const [viewMode, setViewMode] = useState<'upsell' | 'thankyou_accepted' | 'thankyou_declined'>('upsell');
 
   useEffect(() => {
-    document.title = "98 Ejercicios de Entrenamiento de Fútbol de la Selección Española";
+    document.title = "+2000 Sesiones de Entrenamiento de Fútbol";
   }, []);
 
   // Scroll to top helper when state changes
