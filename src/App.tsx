@@ -84,7 +84,7 @@ export default function App() {
                         <Sparkles className="h-4 w-4 text-amber-600 flex-shrink-0 animate-pulse" />
                         <span className="font-bold">98 Ejercicios de Entrenamiento de Fútbol de la Selección Española</span>
                       </div>
-                      <span className="font-black font-mono text-amber-700">12,48€</span>
+                      <span className="font-black font-mono text-amber-700">7,28€</span>
                     </li>
                   ) : (
                     <li className="flex justify-between items-center text-slate-400 italic p-1 border-t border-slate-200 pt-2.5">
@@ -100,7 +100,7 @@ export default function App() {
                 <div className="border-t border-slate-200 pt-3 flex justify-between items-center font-bold text-slate-900 text-sm sm:text-base">
                   <span>Total Cargado:</span>
                   <span className="font-mono text-amber-600 text-lg sm:text-xl font-black">
-                    {viewMode === 'thankyou_accepted' ? 'U$18,60' : 'U$9,30'}
+                    {viewMode === 'thankyou_accepted' ? '16,64€' : '9,36€'}
                   </span>
                 </div>
               </div>
