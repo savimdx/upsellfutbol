@@ -42,16 +42,23 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
   // Hotmart Sales Funnel Widget script initialization
   useEffect(() => {
+    let mounted = false;
+
     const initSalesFunnel = () => {
       if ((window as any).checkoutElements) {
         try {
-          (window as any).checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+          const container = document.getElementById('hotmart-sales-funnel');
+          if (container) {
+            (window as any).checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+            mounted = true;
+          }
         } catch (e) {
           console.warn('Hotmart checkoutElements mount:', e);
         }
       }
     };
 
+    // Run initial mount attempts
     if ((window as any).checkoutElements) {
       initSalesFunnel();
     } else {
@@ -70,6 +77,22 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
         script.addEventListener('load', () => setTimeout(initSalesFunnel, 100));
       }
     }
+
+    // Interval fallback to guarantee mount once DOM/script is ready
+    const interval = setInterval(() => {
+      if (!mounted && (window as any).checkoutElements && document.getElementById('hotmart-sales-funnel')) {
+        initSalesFunnel();
+      }
+    }, 400);
+
+    const timeout = setTimeout(() => {
+      clearInterval(interval);
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
+    };
   }, []);
 
   const formatTimer = (seconds: number) => {
