@@ -193,18 +193,18 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
       <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-14 sm:pt-16 pb-10 relative z-10 space-y-8 sm:space-y-12">
         
-        {/* ================= STEP 2 PROGRESS BAR ================= */}
+        {/* ================= STEP 3 PROGRESS BAR ================= */}
         <section className="bg-white border border-slate-200 py-3 px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left rounded-2xl max-w-3xl mx-auto shadow-sm">
           <div className="flex items-center gap-2.5">
             <span className="text-[11px] sm:text-xs font-black text-slate-800 tracking-wider uppercase">
-              PASO 2 DE 3: <span className="text-red-600 font-black">¡FALTA POCO PARA FINALIZAR!</span> TU PEDIDO PRINCIPAL YA ESTÁ RESERVADO
+              PASO 3 DE 4: <span className="text-red-600 font-black">¡FALTA POCO PARA FINALIZAR!</span> TU PEDIDO PRINCIPAL YA ESTÁ RESERVADO
             </span>
           </div>
           <div className="flex items-center gap-3 w-full md:w-auto md:min-w-[210px]">
             <div className="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border border-slate-200 shadow-inner">
-              <div className="bg-gradient-to-r from-red-600 via-amber-500 to-yellow-400 h-full rounded-full shadow-[0_0_10px_rgba(220,38,38,0.5)]" style={{ width: '85%' }}></div>
+              <div className="bg-gradient-to-r from-red-600 via-amber-500 to-yellow-400 h-full rounded-full shadow-[0_0_10px_rgba(220,38,38,0.5)]" style={{ width: '95%' }}></div>
             </div>
-            <span className="text-[10px] font-mono font-black text-red-600 shrink-0 select-none">85% COMPLETADO</span>
+            <span className="text-[10px] font-mono font-black text-red-600 shrink-0 select-none">95% COMPLETADO</span>
           </div>
         </section>
 
@@ -589,7 +589,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             <div className="flex items-center justify-center gap-2 sm:gap-4 text-[10px] min-[360px]:text-xs sm:text-sm font-semibold text-slate-500 whitespace-nowrap flex-nowrap">
               <span className="text-slate-600 flex items-center gap-1">Valor Oficial: <span className="line-through text-red-500 font-extrabold">97,00€</span></span>
               <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded font-mono font-bold uppercase text-[9px] min-[360px]:text-[10px] tracking-wider shrink-0">
-                Ahorras 87,64€
+                Ahorras 84,52€
               </span>
             </div>
 
@@ -597,7 +597,7 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             <div className="flex flex-col items-center justify-center my-1 select-none whitespace-nowrap">
               <div className="flex items-center justify-center flex-nowrap gap-0.5 sm:gap-1">
                 <span className="text-[3.75rem] min-[360px]:text-[4.5rem] sm:text-[7.5rem] md:text-[8.5rem] font-black text-red-600 tracking-tighter leading-none shrink-0 drop-shadow-sm">
-                  9,36€
+                  12,48€
                 </span>
               </div>
             </div>
