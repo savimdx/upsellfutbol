@@ -23,12 +23,19 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  content-visibility: auto;
+}
+
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
 }
 
 .gpu-accelerated {
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
+  will-change: transform;
 }
 
 .scrollbar-none::-webkit-scrollbar {
