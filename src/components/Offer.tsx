@@ -113,12 +113,14 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                 </div>
 
                 {/* Main Price */}
-                <div className="flex items-center justify-center my-3 select-none overflow-visible whitespace-nowrap flex-nowrap gap-1 sm:gap-3">
-                  <span className="text-[3.75rem] min-[360px]:text-[4.75rem] sm:text-[8.5rem] md:text-[10.5rem] lg:text-[12rem] font-black text-orange-600 tracking-tighter leading-none drop-shadow-sm shrink-0">
-                    7,28
-                  </span>
-                  <span className="text-[3.75rem] min-[360px]:text-[4.75rem] sm:text-[8.5rem] md:text-[10.5rem] lg:text-[12rem] font-black text-orange-600 tracking-tighter leading-none drop-shadow-sm shrink-0">
-                    €
+                <div className="flex flex-col items-center justify-center my-3 select-none overflow-visible whitespace-nowrap">
+                  <div className="flex items-center justify-center flex-nowrap gap-1 sm:gap-3">
+                    <span className="text-[3.75rem] min-[360px]:text-[4.75rem] sm:text-[8.5rem] md:text-[10.5rem] lg:text-[12rem] font-black text-orange-600 tracking-tighter leading-none drop-shadow-sm shrink-0">
+                      US$6,90
+                    </span>
+                  </div>
+                  <span className="text-xs sm:text-sm font-medium text-slate-600 mt-1">
+                    (Puedes pagar en tu moneda local)
                   </span>
                 </div>
 

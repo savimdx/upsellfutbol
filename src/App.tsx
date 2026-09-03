@@ -75,7 +75,7 @@ export default function App() {
                       <span className="text-emerald-600 font-bold">✓</span>
                       <span>Megapack de Entrenamientos de Fútbol</span>
                     </div>
-                    <span className="font-bold font-mono text-slate-700">9,36 €</span>
+                    <span className="font-bold font-mono text-slate-700">US$9,30</span>
                   </li>
 
                   {viewMode === 'thankyou_accepted' ? (
@@ -84,7 +84,7 @@ export default function App() {
                         <Sparkles className="h-4 w-4 text-amber-600 flex-shrink-0 animate-pulse" />
                         <span className="font-bold">98 Ejercicios de Entrenamiento de Fútbol de la Selección Española</span>
                       </div>
-                      <span className="font-black font-mono text-amber-700">7,28 €</span>
+                      <span className="font-black font-mono text-amber-700">US$6,90</span>
                     </li>
                   ) : (
                     <li className="flex justify-between items-center text-slate-400 italic p-1 border-t border-slate-200 pt-2.5">
@@ -100,7 +100,7 @@ export default function App() {
                 <div className="border-t border-slate-200 pt-3 flex justify-between items-center font-bold text-slate-900 text-sm sm:text-base">
                   <span>Total Cargado:</span>
                   <span className="font-mono text-amber-600 text-lg sm:text-xl font-black">
-                    {viewMode === 'thankyou_accepted' ? '16,64 €' : '9,36 €'}
+                    {viewMode === 'thankyou_accepted' ? 'US$16,20' : 'US$9,30'}
                   </span>
                 </div>
               </div>

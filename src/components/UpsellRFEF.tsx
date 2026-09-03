@@ -610,9 +610,9 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             
             {/* Price anchors */}
             <div className="flex items-center justify-center gap-2 sm:gap-4 text-[10px] min-[360px]:text-xs sm:text-sm font-semibold text-slate-500 whitespace-nowrap flex-nowrap">
-              <span className="text-slate-600 flex items-center gap-1">Valor Oficial: <span className="line-through text-red-500 font-extrabold">97,00 €</span></span>
+              <span className="text-slate-600 flex items-center gap-1">Valor Oficial: <span className="line-through text-red-500 font-extrabold">US$97,00</span></span>
               <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded font-mono font-bold uppercase text-[9px] min-[360px]:text-[10px] tracking-wider shrink-0">
-                Ahorras 89,72 €
+                Ahorras US$90,10
               </span>
             </div>
 
@@ -620,9 +620,12 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             <div className="flex flex-col items-center justify-center my-1 select-none whitespace-nowrap">
               <div className="flex items-center justify-center flex-nowrap gap-0.5 sm:gap-1">
                 <span className="text-[3.75rem] min-[360px]:text-[4.5rem] sm:text-[7.5rem] md:text-[8.5rem] font-black text-red-600 tracking-tighter leading-none shrink-0 drop-shadow-sm">
-                  7,28 €
+                  US$6,90
                 </span>
               </div>
+              <span className="text-xs sm:text-sm font-medium text-slate-600 mt-0.5">
+                (Puedes pagar en tu moneda local)
+              </span>
             </div>
 
             <p className="text-[10px] text-slate-500 leading-tight font-mono font-medium">
