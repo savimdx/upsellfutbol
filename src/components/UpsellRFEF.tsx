@@ -1,4 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import heroShowcaseImg from '../assets/images/rfef_hero_showcase.webp';
+import testimonial1Img from '../assets/images/testimonial1.webp';
+import testimonial2Img from '../assets/images/testimonial2.webp';
+import testimonial3Img from '../assets/images/testimonial3.webp';
 import { 
   Check, 
   Clock, 
@@ -251,15 +255,17 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
           <div className="pt-2 flex flex-col items-center justify-center max-w-3xl mx-auto">
             <div className="relative group rounded-3xl bg-white p-2.5 sm:p-4 border-2 border-slate-200 shadow-xl transition-all duration-300 hover:border-red-400 w-full flex flex-col items-center justify-center overflow-hidden">
               <img 
-                src="https://i.ibb.co/s9bHr3YD/Chat-GPT-Image-29-de-ago-de-2026-22-12-41.png" 
+                src={heroShowcaseImg} 
                 alt="98 Ejercicios de Entrenamiento de Fútbol de la Selección Española" 
                 width={640}
-                height={512}
+                height={640}
                 className="w-full h-auto max-w-2xl object-contain rounded-2xl shadow-sm transition-transform duration-500 group-hover:scale-[1.01]"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  e.currentTarget.src = "https://i.ibb.co/s9bHr3YD/Chat-GPT-Image-29-de-ago-de-2026-22-12-41.png";
+                }}
               />
             </div>
           </div>
@@ -495,14 +501,16 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
               <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
                 <img 
-                  src="https://i.ibb.co/mrNtKLvp/Nedjeljko-Josipovic.jpg" 
-                  alt="Nedjeljko-Josipovic" 
+                  src={testimonial1Img} 
+                  alt="Carlos M." 
                   width={40}
                   height={40}
                   className="h-10 w-10 rounded-full object-cover border border-slate-200 shadow-sm shrink-0 bg-slate-100"
                   loading="lazy"
                   decoding="async"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://i.ibb.co/mrNtKLvp/Nedjeljko-Josipovic.jpg";
+                  }}
                 />
                 <div>
                   <h5 className="text-slate-950 font-extrabold text-xs uppercase tracking-wider">Carlos M.</h5>
@@ -531,14 +539,16 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
               <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
                 <img 
-                  src="https://i.ibb.co/tMRxZnpq/dickman-pre-season.webp" 
-                  alt="dickman-pre-season" 
+                  src={testimonial2Img} 
+                  alt="Javier O." 
                   width={40}
                   height={40}
                   className="h-10 w-10 rounded-full object-cover border border-slate-200 shadow-sm shrink-0 bg-slate-100"
                   loading="lazy"
                   decoding="async"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://i.ibb.co/tMRxZnpq/dickman-pre-season.webp";
+                  }}
                 />
                 <div>
                   <h5 className="text-slate-950 font-extrabold text-xs uppercase tracking-wider">Javier O.</h5>
@@ -567,14 +577,16 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
 
               <div className="flex items-center gap-3 pt-3 border-t border-slate-100">
                 <img 
-                  src="https://i.ibb.co/ynd9h7Kj/treinador-de-futebol-ensinando-seus-alunos-23-2149708026.avif" 
-                  alt="treinador-de-futebol-ensinando-seus-alunos-23-2149708026" 
+                  src={testimonial3Img} 
+                  alt="Miguel S." 
                   width={40}
                   height={40}
                   className="h-10 w-10 rounded-full object-cover border border-slate-200 shadow-sm shrink-0 bg-slate-100"
                   loading="lazy"
                   decoding="async"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://i.ibb.co/ynd9h7Kj/treinador-de-futebol-ensinando-seus-alunos-23-2149708026.avif";
+                  }}
                 />
                 <div>
                   <h5 className="text-slate-950 font-extrabold text-xs uppercase tracking-wider">Miguel S.</h5>
@@ -610,9 +622,9 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             
             {/* Price anchors */}
             <div className="flex items-center justify-center gap-2 sm:gap-4 text-[10px] min-[360px]:text-xs sm:text-sm font-semibold text-slate-500 whitespace-nowrap flex-nowrap">
-              <span className="text-slate-600 flex items-center gap-1">Valor Oficial: <span className="line-through text-red-500 font-extrabold">US$97.00</span></span>
+              <span className="text-slate-600 flex items-center gap-1">Valor Oficial: <span className="line-through text-red-500 font-extrabold">97,00 €</span></span>
               <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-0.5 rounded font-mono font-bold uppercase text-[9px] min-[360px]:text-[10px] tracking-wider shrink-0">
-                Ahorras US$90.10
+                Ahorras 89,72 €
               </span>
             </div>
 
@@ -620,12 +632,9 @@ export default function UpsellRFEF({ onAccept, onDecline }: UpsellRFEFProps) {
             <div className="flex flex-col items-center justify-center my-1 select-none whitespace-nowrap">
               <div className="flex items-center justify-center flex-nowrap gap-0.5 sm:gap-1">
                 <span className="text-[3.75rem] min-[360px]:text-[4.5rem] sm:text-[7.5rem] md:text-[8.5rem] font-black text-red-600 tracking-tighter leading-none shrink-0 drop-shadow-sm">
-                  US$6.90
+                  7,28 €
                 </span>
               </div>
-              <span className="text-xs sm:text-sm font-medium text-slate-600 mt-0.5">
-                (Puedes pagar en tu moneda local)
-              </span>
             </div>
 
             <p className="text-[10px] text-slate-500 leading-tight font-mono font-medium">

@@ -105,7 +105,7 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                 <div className="flex items-center justify-center gap-2.5 whitespace-nowrap flex-nowrap">
                   <div className="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-400">
                     <span>Antes</span>
-                    <span className="font-extrabold text-red-500 line-through">US$ 155,00</span>
+                    <span className="font-extrabold text-red-500 line-through">155,00 €</span>
                   </div>
                   <span className="text-[10px] sm:text-[11px] font-black text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-md uppercase tracking-wider leading-none shrink-0">
                     90% Dto.
@@ -113,14 +113,9 @@ export default function Offer({ onPurchase }: { onPurchase?: () => void }) {
                 </div>
 
                 {/* Main Price */}
-                <div className="flex flex-col items-center justify-center my-3 select-none overflow-visible whitespace-nowrap">
-                  <div className="flex items-center justify-center flex-nowrap gap-1 sm:gap-3">
-                    <span className="text-[3.75rem] min-[360px]:text-[4.75rem] sm:text-[8.5rem] md:text-[10.5rem] lg:text-[12rem] font-black text-orange-600 tracking-tighter leading-none drop-shadow-sm shrink-0">
-                      US$6.90
-                    </span>
-                  </div>
-                  <span className="text-xs sm:text-sm font-medium text-slate-600 mt-1">
-                    (Puedes pagar en tu moneda local)
+                <div className="flex items-center justify-center my-3 select-none overflow-visible whitespace-nowrap flex-nowrap gap-1 sm:gap-3">
+                  <span className="text-[3.75rem] min-[360px]:text-[4.75rem] sm:text-[8.5rem] md:text-[10.5rem] lg:text-[12rem] font-black text-orange-600 tracking-tighter leading-none drop-shadow-sm shrink-0">
+                    7,28 €
                   </span>
                 </div>
 
