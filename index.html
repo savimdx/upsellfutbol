@@ -10,13 +10,14 @@
     
     <script>
       function redirectWithParams(destination) {
-        const currentParams = window.location.search;
+        var currentParams = window.location.search;
+
         if (currentParams) {
-          const separator = destination.includes('?') ? '&' : '?';
-          window.location.href = destination + separator + currentParams.substring(1);
-        } else {
-          window.location.href = destination;
+          var separator = destination.includes("?") ? "&" : "?";
+          destination = destination + separator + currentParams.substring(1);
         }
+
+        window.location.href = destination;
       }
       window.redirectWithParams = redirectWithParams;
     </script>

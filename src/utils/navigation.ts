@@ -6,18 +6,14 @@ declare global {
 }
 
 export function redirectWithParams(destination: string) {
-  const currentParams = window.location.search;
+  var currentParams = window.location.search;
 
-  if (!currentParams) {
-    window.location.href = destination;
-    return;
+  if (currentParams) {
+    var separator = destination.includes("?") ? "&" : "?";
+    destination = destination + separator + currentParams.substring(1);
   }
 
-  if (destination.includes("?")) {
-    window.location.href = destination + "&" + currentParams.substring(1);
-  } else {
-    window.location.href = destination + currentParams;
-  }
+  window.location.href = destination;
 }
 
 if (typeof window !== 'undefined') {
